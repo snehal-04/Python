@@ -1,0 +1,17 @@
+list1 = [12, -7, 5, 64, -14]
+list2 = [12, 14, -95, 3]
+
+for n1 in list1:
+      
+    
+    if n1 >= 0:
+       print(n1, end = " ")
+       
+print("\n")
+
+       
+for n2 in list2:
+      
+    
+    if n2 >= 0:
+       print(n2, end = " ")
