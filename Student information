@@ -1,0 +1,31 @@
+import csv
+
+def write(info_list):
+    with open('student_info.csv','a',newline='')as csv_file:
+        writer=csv.writer(csv_file)
+        
+        if csv_file.tell() == 0:
+            writer.writerow(["Name","Roll-no","Email-Id"])
+        
+        writer.writerow(info_list)
+
+
+if __name__ == '__main__':
+    
+    condition=True
+
+    while(condition):
+        student_info=input("Enter Student Information in following order: Name, Roll-no, Email-Id")
+        print(student_info)
+
+        student_info_list=student_info.split(' ')
+        
+        print("Student Information: \n Name: {}\n Roll-no: {}\n Email-Id:{}".format(student_info_list[0], student_info_list[1],student_info_list[2]))
+
+        write(student_info_list)
+
+        check=input("Enter Yes/No if you want to enter information of another student:")
+        if check=="yes":
+            condition=True
+        elif check=="no":
+            condition=False
